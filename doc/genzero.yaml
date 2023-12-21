@@ -1,0 +1,64 @@
+# 1、安装 genzero 工具
+# https://github.com/licat233/genzero
+# go install github.com/licat233/genzero@latest
+# 注意：由于某些细节问题不符合我们自己项目情况，所以Forked了一份源代码进行修改
+#      主要调整两处：取消字段忽略功能、取消NullString支持
+#      修改之后执行：go install ./
+# 2、在当前目录执行：genzero start --src=genzero.yaml
+# 3、在上级目录执行：goctl api go -api desc/main.api -dir .
+# 4、一般情况下，运行一次genzero就够了，所以genzero自动生成的部分也可以直接修改
+#    但如果修改了表结构，或者修改了genzero本身，必须要重新生成时，可以这样处理：
+#    1、生成前使用git暂存或提交一下当前代码，生成后按需合并
+#    2、如果仅涉及部分表，可以设置tables或ignoreTables
+
+api:
+  dir: ""
+  ignoreColumns: []
+  ignoreTables: []
+  jsonStyle: gen_zero
+  jwt: ""
+  middleware: ["AuthMiddleware", "RuleMiddleware"]
+  multiple: true
+  prefix: "/iam"
+  serviceName: "main"
+  status: true
+  tables: []
+database:
+  dsn: "bi:Tse2W4#fa9G@tcp(192.168.6.69:3306)/apiadmin?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai"
+  ignoreColumns: []
+  ignoreTables: []
+  src: ""
+  tables: []
+logic:
+  api:
+    dir: ""
+    fileStyle: genZero
+    ignoreTables: []
+    status: false
+    tables: []
+    useRpc: false
+  rpc:
+    dir: ""
+    fileStyle: genZero
+    ignoreTables: []
+    multiple: false
+    status: false
+    tables: []
+  status: false
+model:
+  dir: ""
+  ignoreColumns: []
+  ignoreTables: []
+  status: false
+  tables: []
+proto:
+  dir: ""
+  fileStyle: genZero
+  goPackage: ""
+  ignoreColumns: []
+  ignoreTables: []
+  multiple: false
+  package: ""
+  serviceName: ""
+  status: false
+  tables: []

@@ -6,11 +6,11 @@ var (
 	baseIgnoreTables  = []string{}
 	baseIgnoreColumns = []string{
 		"version",
-		"create_time",
+		// "create_time",
 		"created_time",
 		"create_at",
 		"created_at",
-		"update_time",
+		// "update_time",
 		"updated_time",
 		"update_at",
 		"updated_at",

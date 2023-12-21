@@ -191,19 +191,21 @@ var TypeForMysqlToGo = map[string]string{
 	"char":               "string",
 	"tinytext":           "string",
 	"mediumtext":         "string",
-	"text":               "sql.NullString",
-	"longtext":           "sql.NullString",
-	"blob":               "string",
-	"tinyblob":           "string",
-	"mediumblob":         "string",
-	"longblob":           "string",
-	"date":               "time.Time", // time.Time or string
-	"datetime":           "time.Time", // time.Time or string
-	"timestamp":          "time.Time", // time.Time or string
-	"time":               "time.Time", // time.Time or string
-	"float":              "float64",
-	"double":             "float64",
-	"decimal":            "float64",
-	"binary":             "string",
-	"varbinary":          "string",
+	// "text":               "sql.NullString",
+	// "longtext":           "sql.NullString",
+	"text":       "string",
+	"longtext":   "string",
+	"blob":       "string",
+	"tinyblob":   "string",
+	"mediumblob": "string",
+	"longblob":   "string",
+	"date":       "time.Time", // time.Time or string
+	"datetime":   "time.Time", // time.Time or string
+	"timestamp":  "time.Time", // time.Time or string
+	"time":       "time.Time", // time.Time or string
+	"float":      "float64",
+	"double":     "float64",
+	"decimal":    "float64",
+	"binary":     "string",
+	"varbinary":  "string",
 }
