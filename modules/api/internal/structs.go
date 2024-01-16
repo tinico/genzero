@@ -225,6 +225,8 @@ func GenListReqFields() StructFieldCollection {
 		// NewStructField("Page", "int64", "json", "page", "optional,default=1", "当前页码，默认1，可选"),
 		NewStructField("Current", "int64", "json", "current", "optional,default=1", "当前页码，默认1，用于对接umijs，可选"),
 		// NewStructField("Keyword", "string", "json", "keyword", "optional", "关键词，可选"),
+		NewStructField("Start", "string", "json", "start", "optional", "开始时间"),
+		NewStructField("End", "string", "json", "end", "optional", "结束时间"),
 	}
 }
 
