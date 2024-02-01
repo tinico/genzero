@@ -28,6 +28,9 @@ func TableFilterCondition() (mustFilter bool, checkTables []string) {
 }
 
 func goType(sqlType string) string {
+	if strings.Contains(sqlType, "(") {
+		sqlType = strings.Split(sqlType, "(")[0]
+	}
 	v, ok := TypeForMysqlToGo[sqlType]
 	if ok {
 		return v

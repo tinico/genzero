@@ -33,7 +33,11 @@ func (s *Server) String() string {
 	}
 	if s.Group != "" {
 		exists = true
-		buf.WriteString("  group: " + s.Group + "\n")
+		if s.Group == "package" { // 关键字处理
+			buf.WriteString("  group: " + s.Group + "s\n")
+		} else {
+			buf.WriteString("  group: " + s.Group + "\n")
+		}
 	}
 	if len(s.Middleware) != 0 {
 		exists = true
