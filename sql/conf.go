@@ -5,7 +5,7 @@ import "github.com/licat233/genzero/config"
 var (
 	baseIgnoreTables  = []string{}
 	baseIgnoreColumns = []string{
-		"version",
+		// "version",
 		// "create_time",
 		"created_time",
 		"create_at",
@@ -18,7 +18,7 @@ var (
 	DelFieldNames = []string{
 		"is_deleted",
 		"is_delete",
-		"is_del",
+		// "is_del",
 		"deleted",
 		"delete_flag",
 		"del_flag",
@@ -30,7 +30,7 @@ var (
 		"deleted_at",
 		"delete_at",
 		"deleted_time",
-		"delete_time",
+		// "delete_time",
 		"del_at",
 		"del_time",
 	}
