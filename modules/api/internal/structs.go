@@ -168,7 +168,7 @@ func NewStructField(name, typ, tagType, tagName, tagOpt, comment string) *Struct
 	}
 
 	if typ == "time.Time" {
-		typ = "string"
+		typ = "int64"
 	}
 
 	tagName = utils.ConvertStringStyle(config.C.Api.JsonStyle, tagName)
